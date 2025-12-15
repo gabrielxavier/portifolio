@@ -5,7 +5,7 @@
         <div class="col-span-12 lg:col-span-6 lg:col-start-4">
           <BaseHeading
             title="Habilidades técnicas"
-            subtitle="Tecnologias domino e utilizo no desenvolvimento de aplicações web modernas, robustas e escaláveis."
+            subtitle="Tecnologias que domino e utilizo no desenvolvimento de aplicações web modernas, robustas e escaláveis."
             align="center"
             class="mb-12"
           />
