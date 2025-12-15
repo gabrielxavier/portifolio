@@ -1,15 +1,18 @@
 <template>
-  <header class="fixed top-0 bg-zinc-900 w-full py-6 z-2">
+  <header class="fixed top-0 bg-zinc-900 w-full lg:py-6 z-2">
     <div class="container mx-auto">
       <div class="flex items-center justify-between">
-        <h1>
+        <h1 class="ms-4 sm:ms-0">
           <a href="/" @click.prevent="onClickLogo">
-            <div class="text-xl text-white font-bold">Gabriel Xavier</div>
-            <div class="text-xl text-gray-400">Desenvolvedor Front-end</div>
+            <div class="text-sm lg:text-xl text-white font-bold">Gabriel Xavier</div>
+            <div class="text-sm lg-text-xl text-gray-400">Desenvolvedor Front-end</div>
           </a>
         </h1>
 
-        <nav class="flex items-center">
+        <button class="cursor-pointer p-4 block lg:hidden">
+          <IconsMenu width="32" height="32" class="fill-white hover:fill-amber-600 transition" />
+        </button>
+        <nav class="items-center hidden xl:flex">
           <ul class="flex">
             <li v-for="link in links" :key="link.value" class="me-2">
               <a

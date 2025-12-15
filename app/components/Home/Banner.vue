@@ -1,22 +1,22 @@
 <template>
-  <section id="banner" class="section-banner py-20">
-    <div class="container mx-auto">
+  <section id="banner" class="section-banner lg-py-20">
+    <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 items-center">
-        <div class="col-span-6 col-start-2">
+        <div class="col-span-12 lg:col-span-6 lg:col-start-2">
           <div class="text-lg text-white">Olá, eu sou</div>
           <div class="text-2xl text-amber-600 font-bold mt-1">Gabriel Xavier</div>
-          <div class="text-5xl text-white font-bold mt-1">Desenvolvedor Front-end</div>
-          <p class="text-lg text-white mt-2">
+          <div class="text-3xl lg:text-5xl text-white font-bold mt-1">Desenvolvedor Front-end</div>
+          <p class="lg:text-lg text-white mt-2">
             Bem-vindo ao meu portfólio! Aqui você encontrará informações sobre minhas habilidades, projetos,
             experiências profissionais e como entrar em contato comigo.
           </p>
           <BaseButton @click="onClickContact" class="mt-6">Contato</BaseButton>
         </div>
-        <div class="col-span-3 col-start-9">
+        <div class="col-span-12 lg:col-span-3 lg:col-start-9 hidden lg:block">
           <img
             alt="Gabriel Xavier"
             src="@/assets/images/profile-image.webp"
-            class="rounded-full border-amber-600 border-2"
+            class="rounded-full border-amber-600 border-2 w-60 lg:w-full mx-auto"
             width="400"
             height="400"
             fetchpriority="high"

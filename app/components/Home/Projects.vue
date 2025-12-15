@@ -1,8 +1,8 @@
 <template>
-  <section id="projects" class="section-about pb-20">
-    <div class="container mx-auto">
-      <div class="grid grid-cols-12 gap-4 mb-12">
-        <div class="col-span-8 col-start-3">
+  <section id="projects" class="section-about pb-10 lg:pb-20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-12 gap-4 mb-6 lg:mb-12">
+        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
           <BaseHeading
             title="Projetos em destaque"
             subtitle="Soluções web inovadoras desenvolvidas com tecnologias modernas, arquitetura escalável e melhores práticas de engenharia de software."
@@ -15,7 +15,7 @@
             <div
               v-for="project in projects"
               :key="project.title"
-              class="embla__slide flex-[0_0_calc(100%/3)] min-w-0 ps-6"
+              class="embla__slide flex-[0_0_100%] lg:flex-[0_0_calc(100%/3)] min-w-0 ps-6"
             >
               <div class="mb-4">
                 <img :src="project.image" :alt="project.title" width="600" height="300" />
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-        <div class="embla__controls relative block mt-8 mb-1 ms-1">
+        <div class="embla__controls relative block mt-4 lg:mt-8 mb-1 ms-1">
           <div class="embla__buttons flex items-center">
             <button
               @click="onClickPrev"
@@ -59,7 +59,7 @@
             </button>
           </div>
           <div
-            class="embla__dots flex flex-wrap justify-center items-center absolute bottom-0 top-1/2 left-1/2 -translate-1/2"
+            class="embla__dots hidden lg:flex flex-wrap justify-center items-center absolute bottom-0 top-1/2 left-1/2 -translate-1/2"
           >
             <button
               v-for="page in slidesPages"
@@ -170,12 +170,17 @@ const projects = ref([
   }
 ])
 
-const slidesToScroll = 3
-const slidesPages = computed<number>(() => projects.value.length / slidesToScroll)
+const slidesToScrollDesktop = 3
+const slidesPages = computed<number>(() => projects.value.length / slidesToScrollDesktop)
 
 const [emblaRef, emblaApi] = emblaCarouselVue({
   loop: false,
-  slidesToScroll
+  slidesToScroll: 1,
+  breakpoints: {
+    '(min-width: 1280px)': {
+      slidesToScroll: 3
+    }
+  }
 })
 
 const slideIndex = ref<number>(0)

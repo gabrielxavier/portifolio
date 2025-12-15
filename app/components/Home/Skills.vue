@@ -1,8 +1,8 @@
 <template>
-  <section id="skills" class="section-about pb-20">
-    <div class="container mx-auto">
+  <section id="skills" class="section-about pb-10 lg:pb-20">
+    <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-6 col-start-4">
+        <div class="col-span-12 lg:col-span-6 lg:col-start-4">
           <BaseHeading
             title="Habilidades técnicas"
             subtitle="Tecnologias domino e utilizo no desenvolvimento de aplicações web modernas, robustas e escaláveis."
@@ -12,12 +12,12 @@
         </div>
       </div>
       <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-6 text-end">
+        <div class="col-span-12 lg:col-span-6 text-center lg:text-end order-last lg:order-first">
           <div class="pe-8">
             <BaseTag v-for="skill in skills" :key="skill" class="ms-4 mb-4">{{ skill }}</BaseTag>
           </div>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-12 lg:col-span-6 order-first lg:order-last">
           <div class="ps-8">
             <BaseProgressbar
               v-for="skill in mainlySkills"

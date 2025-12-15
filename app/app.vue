@@ -9,7 +9,7 @@
 <script setup lang="ts">
 useHead({
   bodyAttrs: {
-    class: 'bg-zinc-900 text-white pt-26'
+    class: 'bg-zinc-900 text-white pt-20 lg:pt-26'
   }
 })
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <section id="experience" class="section-about pb-20">
-    <div class="container mx-auto">
+  <section id="experience" class="section-about pb-10 lg:pb-20">
+    <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 items-center mb-12">
         <div class="col-span-8 col-start-3">
           <BaseHeading title="Experiência profissional" />
