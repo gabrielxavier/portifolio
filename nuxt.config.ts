@@ -4,8 +4,14 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Gabriel Xavier - Frontend Developer',
-      meta: [{ name: 'description', content: 'Portifólio Gabriel Xavier' }],
+      title: 'Gabriel Xavier - Desenvolvedor Front-end',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Desenvolvedor Front-end Sênior com mais de 13 anos de experiência em desenvolvimento de aplicações web,'
+        }
+      ],
       htmlAttrs: {
         lang: 'pt-BR'
       }
