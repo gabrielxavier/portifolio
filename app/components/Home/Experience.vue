@@ -1,9 +1,9 @@
 <template>
-  <section id="experience" class="section-about pb-10 lg:pb-20">
+  <section id="experience" class="section-about pb-10 xl:pb-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 items-center mb-12">
         <div class="col-span-8 col-start-3">
-          <BaseHeading title="Experiência profissional" />
+          <BaseHeading title="Experiência profissional" subtitle="Mais de uma década criando soluções de impacto." />
         </div>
       </div>
       <div class="relative ps-20">
@@ -82,7 +82,7 @@ const experiences = ref<WorkExperience[]>([
   {
     title: 'Desenvolvedor Fullstack Júnior',
     company: 'A2C Agencia',
-    date: 'jul de 2012 - dez de 2012 · 6 meses',
+    date: 'fevereiro de 2012 - dezembro de 2012 · 11 meses',
     description:
       'Desenvolvimento de websites/blogs como Tecnisa Ideias, Mundo Tigre,  MVAgusta Blog, Clicheria, Dafrabikes.  Manutenção de sites como Tecnisa Wiki, Mundo Tigre, Dafra, Ciplak, Lwart, Lepper entre outros.',
     tags: ['HTML5', 'CSS3', 'JavaScript (ES6+)']

@@ -1,9 +1,9 @@
 <template>
-  <section id="about" class="section-about pb-8 lg:pb-20">
+  <section id="about" class="section-about pb-10 xl:pb-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 items-center">
         <div class="col-span-12 lg:col-span-8 lg:col-start-3">
-          <BaseHeading title="Sobre mim" />
+          <BaseHeading title="Sobre mim" subtitle="Lorem ipsum dolor ist" />
           <p class="mt-6 text-center">
             Sou Desenvolvedor Front-end Sênior com mais de {{ currentYear - 2012 }} anos de experiência em
             desenvolvimento de aplicações web, formado pela Sociesc no Tecnólogo em Sistemas para Internet, especialista

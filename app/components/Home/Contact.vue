@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="section-about pb-10 lg:pb-20">
+  <section id="contact" class="section-about pb-10 xl:pb-20">
     <div class="container mx-auto">
       <div class="grid grid-cols-12 gap-4 items-center">
         <div class="col-span-8 col-start-3">

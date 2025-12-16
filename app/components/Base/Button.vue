@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="text-sm lg:text-lg text-white bg-amber-600 hover:bg-amber-700 transition rounded-md gap-2 px-4 py-3 font-medium cursor-pointer"
+    class="text-sm xl:text-lg text-white bg-amber-600 hover:bg-amber-700 transition rounded-md gap-2 px-4 py-3 font-medium cursor-pointer"
   >
     <slot></slot>
   </component>

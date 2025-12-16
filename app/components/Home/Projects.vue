@@ -1,8 +1,8 @@
 <template>
-  <section id="projects" class="section-about pb-10 lg:pb-20">
+  <section id="projects" class="section-about pb-10 xl:pb-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 mb-6 lg:mb-12">
-        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
+        <div class="col-span-12 lg:col-span-6 lg:col-start-4">
           <BaseHeading
             title="Projetos em destaque"
             subtitle="Soluções web inovadoras desenvolvidas com tecnologias modernas, arquitetura escalável e melhores práticas de engenharia de software."

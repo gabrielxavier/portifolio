@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 bg-zinc-900 w-full xl:py-6 z-3">
+  <header class="fixed top-0 bg-zinc-900 w-full xl:py-4 2xl:py-6 z-3">
     <div class="container mx-auto">
       <div class="flex items-center justify-between">
         <h1 class="ms-4 xl:ms-0">
@@ -27,7 +27,7 @@
               <a
                 :href="`#${link.value}`"
                 @click.prevent="onClickAnchor"
-                class="block text-sm lg:text-lg text-white hover:text-amber-600 p-3 transition"
+                class="block text-sm xl:text-lg text-white hover:text-amber-600 p-3 transition"
               >
                 {{ link.label }}
               </a>
