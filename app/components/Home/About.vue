@@ -4,7 +4,7 @@
       <div class="grid grid-cols-12 gap-4 items-center">
         <div class="col-span-12 lg:col-span-8 lg:col-start-3">
           <BaseHeading title="Sobre mim" subtitle="Lorem ipsum dolor ist" />
-          <p class="mt-6 text-center">
+          <p class="mt-12 text-center">
             Sou Desenvolvedor Front-end Sênior com mais de {{ currentYear - 2012 }} anos de experiência em
             desenvolvimento de aplicações web, formado pela Sociesc no Tecnólogo em Sistemas para Internet, especialista
             em Vue.js e com sólido conhecimento em Nuxt, HTML5, CSS3, JavaScript (ES6+), Pinia e Cypress. Possuo
