@@ -1,11 +1,13 @@
 <template>
-  <section id="banner" class="section-banner lg-py-20">
+  <section id="banner" class="section-banner py-10 xl:py-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 items-center">
         <div class="col-span-12 lg:col-span-6 lg:col-start-2">
           <div class="text-lg text-white">Olá, eu sou</div>
-          <div class="text-2xl text-amber-600 font-bold mt-1">Gabriel Xavier</div>
-          <div class="text-3xl lg:text-5xl text-white font-bold mt-1">Desenvolvedor Front-end</div>
+          <div class="text-xl lg:text-2xl text-amber-600 font-bold mt-1">Gabriel Xavier</div>
+          <div class="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-white font-bold mt-1">
+            Desenvolvedor Front-end
+          </div>
           <p class="lg:text-lg text-white mt-2">
             Bem-vindo ao meu portfólio! Aqui você encontrará informações sobre minhas habilidades, projetos,
             experiências profissionais e como entrar em contato comigo.

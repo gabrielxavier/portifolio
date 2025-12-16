@@ -1,6 +1,6 @@
 <template>
   <div :class="alignClass">
-    <h2 v-if="title" class="text-3xl lg:text-4xl text-white font-bold">{{ title }}</h2>
+    <h2 v-if="title" class="text-2xl lg:text-3xl xl:text-4xl text-white font-bold">{{ title }}</h2>
     <p v-if="subtitle" class="text-lg text-white mt-4">{{ subtitle }}</p>
   </div>
 </template>

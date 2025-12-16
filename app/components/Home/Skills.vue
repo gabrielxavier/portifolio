@@ -13,12 +13,12 @@
       </div>
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-12 lg:col-span-6 text-center lg:text-end order-last lg:order-first">
-          <div class="pe-8">
+          <div class="lg:pe-4 2xl:pe-8">
             <BaseTag v-for="skill in skills" :key="skill" class="ms-4 mb-4">{{ skill }}</BaseTag>
           </div>
         </div>
         <div class="col-span-12 lg:col-span-6 order-first lg:order-last">
-          <div class="ps-8">
+          <div class="lg:ps-4 2xl:ps-8">
             <BaseProgressbar
               v-for="skill in mainlySkills"
               :key="skill.name"
