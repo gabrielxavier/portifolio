@@ -9,7 +9,7 @@
           </a>
         </h1>
 
-        <button class="cursor-pointer p-4 block xl:hidden">
+        <button class="cursor-pointer p-4 block xl:hidden" :aria-label="toggleButtonTitle">
           <IconsMenu
             @click="onClickToggleMenu"
             width="32"
@@ -117,6 +117,10 @@ function onClickToggleMenu() {
 function onClickHideMenu() {
   isMenuOpen.value = false
 }
+
+const toggleButtonTitle = computed<string>(() => {
+  return isMenuOpen.value ? 'Ocultar menu' : 'Exibir menu'
+})
 </script>
 
 <style lang="scss">
