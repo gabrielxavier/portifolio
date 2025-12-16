@@ -1,5 +1,7 @@
 <template>
-  <div class="rounded-lg text-white bg-amber-600 inline-block" :class="sizeClass"><slot></slot></div>
+  <div class="rounded-lg text-sm xl:text-base text-white bg-amber-600 inline-block" :class="sizeClass">
+    <slot></slot>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -15,8 +17,8 @@ const sizeClass = computed<string>(() => {
   if (!props.size) return ''
 
   const sizeVariants = {
-    compact: 'px-3 py-1',
-    default: 'px-4 py-2',
+    compact: 'px-2 py-1 xl:px-3 xl:py-1',
+    default: 'px-3 py-1 xl:px-4 xl:py-2',
     comfortable: 'px-5 py-2'
   }
 

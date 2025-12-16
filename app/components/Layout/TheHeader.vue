@@ -18,13 +18,16 @@
             :class="{ 'fill-white': !isMenuOpen, 'fill-amber-600': isMenuOpen }"
           />
         </button>
-        <nav class="dropdown-mobile items-center hidden xl:flex bg-neutral-800" :class="{ 'is-open': isMenuOpen }">
-          <ul class="flex">
-            <li v-for="link in links" :key="link.value" class="me-2">
+        <nav
+          class="dropdown-menu items-center hidden xl:flex bg-neutral-800 xl:bg-transparent"
+          :class="{ '--is-open': isMenuOpen }"
+        >
+          <ul class="flex flex-col xl:flex-row mb-2 xl:mb-0">
+            <li v-for="link in links" :key="link.value" class="block me-2">
               <a
                 :href="`#${link.value}`"
                 @click.prevent="onClickAnchor"
-                class="text-sm lg:text-lg text-white hover:text-amber-600 p-3 transition"
+                class="block text-sm lg:text-lg text-white hover:text-amber-600 p-3 transition"
               >
                 {{ link.label }}
               </a>
@@ -41,8 +44,12 @@
       </div>
     </div>
   </header>
-  <Transition name="fade">
-    <div v-if="isMenuOpen" class="backdrop" @click="onClickToggleMenu"></div>
+  <Transition name="fade-backdrop">
+    <div
+      v-if="isMenuOpen"
+      class="backdrop bg-black/80 fixed z-2 left-0 top-0 w-full h-full"
+      @click="onClickHideMenu"
+    ></div>
   </Transition>
 </template>
 
@@ -106,58 +113,41 @@ const isMenuOpen = ref<boolean>(false)
 function onClickToggleMenu() {
   isMenuOpen.value = !isMenuOpen.value
 }
+
+function onClickHideMenu() {
+  isMenuOpen.value = false
+}
 </script>
 
 <style lang="scss">
-.dropdown-mobile {
-  position: absolute;
-  right: 0;
-  top: 64px;
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  padding: 0 16px 16px 16px;
-  z-index: 4;
-  align-items: start;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-  transform: translateX(100%);
-
-  &.is-open {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  ul {
+@media screen and (max-width: 79rem) {
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 64px;
+    display: flex;
     flex-direction: column;
-    margin-bottom: 8px;
+    max-width: 300px;
+    padding: 0 16px 16px 16px;
+    z-index: 4;
+    align-items: start;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateX(100%);
 
-    li {
-      display: block;
-
-      a {
-        display: block;
-      }
+    &.--is-open {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
-}
 
-.backdrop {
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+  .fade-backdrop-enter-active,
+  .fade-backdrop-leave-active {
+    transition: opacity 0.3s;
+  }
+  .fade-backdrop-enter,
+  .fade-backdrop-leave-to {
+    opacity: 0;
+  }
 }
 </style>

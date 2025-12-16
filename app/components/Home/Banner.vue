@@ -1,5 +1,5 @@
 <template>
-  <section id="banner" class="section-banner py-10 xl:py-20">
+  <section id="banner" class="section-banner pt-4 py-10 xl:py-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-12 gap-4 items-center">
         <div class="col-span-12 lg:col-span-6 lg:col-start-2">

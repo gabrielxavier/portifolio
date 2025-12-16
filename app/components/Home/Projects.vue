@@ -15,7 +15,7 @@
             <div
               v-for="project in projects"
               :key="project.title"
-              class="embla__slide flex-[0_0_100%] lg:flex-[0_0_calc(100%/3)] min-w-0 ps-6"
+              class="embla__slide flex-[0_0_100%] sm:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] min-w-0 ps-6"
             >
               <div class="mb-4">
                 <img :src="project.image" :alt="project.title" width="600" height="300" />
@@ -179,6 +179,9 @@ const [emblaRef, emblaApi] = emblaCarouselVue({
   loop: false,
   slidesToScroll: 1,
   breakpoints: {
+    '(min-width: 640px)': {
+      slidesToScroll: 2
+    },
     '(min-width: 1280px)': {
       slidesToScroll: 3
     }
